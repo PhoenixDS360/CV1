@@ -84,7 +84,7 @@ def main():
     option = st.sidebar.selectbox("", ["Sample Data", "Upload Image"])
     
     #model_url = 'wget -O ./stand.hdf5 https://drive.google.com/file/d/1-IfG8mqTrbfGxT0IbBa1GxP1RlidlzrS/view?usp=sharing'
-    model_url = 'wget ./standalone https://drive.google.com/drive/folders/1R6SkmmHkeGjbz5gz9mWM1y3FdMnBeICx?usp=sharing'
+    model_url = 'wget https://drive.google.com/drive/folders/1R6SkmmHkeGjbz5gz9mWM1y3FdMnBeICx?usp=sharing'
     
   
     with st.spinner('Downloading model'):
