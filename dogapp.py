@@ -11,7 +11,7 @@ import wget
 @st.cache(allow_output_mutation=True)
 def load_model(model_dir,model_file):
   
-  model=tf.keras.models.load_model('./standalone')
+  model=tf.keras.models.load_model('./stand.hdf5')
   return model
 
 def get_disp_img(x):
