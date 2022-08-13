@@ -83,13 +83,13 @@ def main():
     st.sidebar.subheader('Choose what you want to do:')
     option = st.sidebar.selectbox("", ["Sample Data", "Upload Image"])
     
-    #model_url = 'wget -O ./stand.hdf5 https://drive.google.com/file/d/1-IfG8mqTrbfGxT0IbBa1GxP1RlidlzrS/view?usp=sharing'
-    model_url = 'wget -O ./standalone https://drive.google.com/drive/folders/1R6SkmmHkeGjbz5gz9mWM1y3FdMnBeICx?usp=sharing'
+    model_url = 'wget -O ./stand.hdf5 https://drive.google.com/file/d/1-IfG8mqTrbfGxT0IbBa1GxP1RlidlzrS/view?usp=sharing'
+    #model_url = 'wget -O ./standalone https://drive.google.com/drive/folders/1R6SkmmHkeGjbz5gz9mWM1y3FdMnBeICx?usp=sharing'
     
   
     with st.spinner('Downloading model'):
       os.system(model_url)
-      path = "/app/cv1/standalone/"
+      path = "/app/cv1/"
       dir_list = os.listdir(path)
       #cwd = os.getcwd()   
       st.write(dir_list)
