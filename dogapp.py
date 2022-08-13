@@ -10,7 +10,12 @@ import wget
 
 @st.cache(allow_output_mutation=True)
 def load_model(model_dir,model_file):
+  model_url = 'wget -O ./stand.hdf5 https://www.dropbox.com/s/aymp4u8g0dyrbui/stand.hdf5?dl=0'
   
+  with st.spinner('Downloading model'):
+      os.system(model_url)
+      path = "/app/cv1/"
+      dir_list = os.listdir(path)
   model=tf.keras.models.load_model('./stand.hdf5')
   return model
 
@@ -85,14 +90,9 @@ def main():
     
     #model_url = 'wget -O ./stand.hdf5 https://drive.google.com/file/d/1-IfG8mqTrbfGxT0IbBa1GxP1RlidlzrS/view?usp=sharing'
     #model_url = 'wget -O ./standalone https://drive.google.com/drive/folders/1R6SkmmHkeGjbz5gz9mWM1y3FdMnBeICx?usp=sharing'
-    model_url = 'wget -O ./stand.hdf5 https://www.dropbox.com/s/aymp4u8g0dyrbui/stand.hdf5?dl=0'
-  
-    with st.spinner('Downloading model'):
-      os.system(model_url)
-      path = "/app/cv1/"
-      dir_list = os.listdir(path)
+   
       #cwd = os.getcwd()   
-      st.write(dir_list)
+      #st.write(dir_list)
       
     #load the model in cache
     model=load_model(model_dir,model_file)
