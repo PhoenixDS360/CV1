@@ -9,15 +9,11 @@ import os
 
 @st.cache(allow_output_mutation=True)
 def load_model(model_dir,model_file):
-  import h5py
-  filename = "stand.hdf5"
-
-  with h5py.File(filename, "r") as f:
-    # Print all root level object names (aka keys) 
-    # these can be group or dataset names 
-    print("Keys: %s" % f.keys())
-    # get first object name/key; may or may NOT be a group
-    a_group_key = list(f.keys())[0]
+  
+  model_url = 'wget -O ./stand.hdf5 https://drive.google.com/file/d/1-IfG8mqTrbfGxT0IbBa1GxP1RlidlzrS/view?usp=sharing'
+  with st.spinner('Downloading model'):
+    os.system(model_url)
+          
   model=tf.keras.models.load_model(model_dir+model_file)
   return model
 
