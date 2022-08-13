@@ -92,7 +92,7 @@ def main():
       path = "/app/cv1"
       dir_list = os.listdir(path)
       #cwd = os.getcwd()   
-      st.write(cwd)
+      st.write(dir_list)
       
     #load the model in cache
     model=load_model(model_dir,model_file)
