@@ -14,9 +14,9 @@ def load_model(model_dir,model_file):
   
   with st.spinner('Downloading model'):
       os.system(model_url)
-      path = "/app/cv1/"
-      dir_list = os.listdir(path)
-  model=tf.keras.models.load_model('./stand.hdf5')
+      #path = "/app/cv1/"
+      #dir_list = os.listdir(path)
+      model=tf.keras.models.load_model('./stand.hdf5')
   return model
 
 def get_disp_img(x):
