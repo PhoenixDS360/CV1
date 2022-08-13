@@ -11,7 +11,7 @@ import wget
 @st.cache(allow_output_mutation=True)
 def load_model(model_dir,model_file):
   
-  model=tf.keras.models.load_model('./stand.hdf5')
+  model=tf.keras.models.load_model('./standalone')
   return model
 
 def get_disp_img(x):
@@ -83,7 +83,8 @@ def main():
     st.sidebar.subheader('Choose what you want to do:')
     option = st.sidebar.selectbox("", ["Sample Data", "Upload Image"])
     
-    model_url = 'wget -O ./stand.hdf5 https://drive.google.com/file/d/1-IfG8mqTrbfGxT0IbBa1GxP1RlidlzrS/view?usp=sharing'
+    #model_url = 'wget -O ./stand.hdf5 https://drive.google.com/file/d/1-IfG8mqTrbfGxT0IbBa1GxP1RlidlzrS/view?usp=sharing'
+    model_url = 'wget -0 ./standalone https://drive.google.com/drive/folders/1R6SkmmHkeGjbz5gz9mWM1y3FdMnBeICx?usp=sharing'
    
     with st.spinner('Downloading model'):
       os.system(model_url)
