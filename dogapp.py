@@ -89,9 +89,9 @@ def main():
   
     with st.spinner('Downloading model'):
       os.system(model_url)
-      path = "standalone"
-      #dir_list = os.listdir(path)
-      cwd = os.getcwd()   
+      path = "/app/cv1"
+      dir_list = os.listdir(path)
+      #cwd = os.getcwd()   
       st.write(cwd)
       
     #load the model in cache
