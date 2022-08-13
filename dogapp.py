@@ -85,12 +85,14 @@ def main():
     
     #model_url = 'wget -O ./stand.hdf5 https://drive.google.com/file/d/1-IfG8mqTrbfGxT0IbBa1GxP1RlidlzrS/view?usp=sharing'
     model_url = 'wget -O ./standalone https://drive.google.com/drive/folders/1R6SkmmHkeGjbz5gz9mWM1y3FdMnBeICx?usp=sharing'
-   
+    
+  
     with st.spinner('Downloading model'):
       os.system(model_url)
       path = "standalone"
-      dir_list = os.listdir(path)
-      st.write(dir_list)
+      #dir_list = os.listdir(path)
+      cwd = os.getcwd()   
+      st.write(cwd)
       
     #load the model in cache
     model=load_model(model_dir,model_file)
