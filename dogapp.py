@@ -88,7 +88,7 @@ def main():
    
     with st.spinner('Downloading model'):
       os.system(model_url)
-      path = "./standalone"
+      path = "standalone"
       dir_list = os.listdir(path)
       st.write(dir_list)
       
