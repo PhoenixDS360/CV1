@@ -6,6 +6,7 @@ from PIL import Image
 import streamlit as st
 import plotly.express as px
 import os
+import wget
 
 @st.cache(allow_output_mutation=True)
 def load_model(model_dir,model_file):
