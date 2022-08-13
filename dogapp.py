@@ -88,7 +88,9 @@ def main():
    
     with st.spinner('Downloading model'):
       os.system(model_url)
-          
+      path = "./standalone"
+      dir_list = os.listdir(path)
+      st.write(dir_list)
       
     #load the model in cache
     model=load_model(model_dir,model_file)
