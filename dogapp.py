@@ -89,7 +89,7 @@ def main():
   
     with st.spinner('Downloading model'):
       os.system(model_url)
-      path = "/app/cv1/standalone/"
+      path = "/app/cv1/"
       dir_list = os.listdir(path)
       #cwd = os.getcwd()   
       st.write(dir_list)
